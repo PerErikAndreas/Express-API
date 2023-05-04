@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Loader } from './Loader';
-import { StyledSection, Frame, StyledTextBold, Button, StyledParagraphText } from './Styling';
+import { StyledSection, Frame, Button, StyledTextBold, StyledParagraphText } from './Styling';
 
 export const Single = () => {
   const [list, setList] = useState([]);
@@ -9,10 +9,10 @@ export const Single = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch('https://project-express-api-fx2imjnsnq-lz.a.run.app/allclouds/')
+    fetch('https://project-express-api-fx2imjnsnq-lz.a.run.app/allclouds/1')
       .then((res) => res.json())
       .then((data) => {
-        setList(data.body.andreasClouds);
+        setList(data.body.fluff);
         setLoading(false);
       })
       .catch((error) => {
@@ -31,9 +31,8 @@ export const Single = () => {
         <StyledParagraphText>
           <Button as={NavLink} to="/">BACK</Button>
         </StyledParagraphText>
-        {list.map((andreasClouds) => (
-          <StyledTextBold key={andreasClouds.id}>{andreasClouds.name}</StyledTextBold>
-        ))}
+        <StyledTextBold>{list.name}</StyledTextBold>
+        <StyledTextBold>{list.description}</StyledTextBold>
       </StyledSection>
     </Frame>
   );

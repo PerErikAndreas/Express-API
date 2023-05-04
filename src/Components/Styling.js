@@ -77,7 +77,7 @@ export const Button = styled.button`
 `;
 
 export const Image = styled.img`
-  width: 164px; 
+  width: 150px; 
   object-fit: cover;
   `;
 

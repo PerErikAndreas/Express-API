@@ -12,6 +12,9 @@ export const Startpage = () => {
           <Button as={NavLink} to="/allclouds">ALL CLOUDS</Button>
         </StyledParagraphText>
         <StyledParagraphText>
+          <Button as={NavLink} to="/singlecloud">ONE SINGLE CLOUD</Button>
+        </StyledParagraphText>
+        <StyledParagraphText>
           <Button as={NavLink} to="/dreamyness">DREAMYNESS OVER 40</Button>
         </StyledParagraphText>
         <StyledParagraphText>
