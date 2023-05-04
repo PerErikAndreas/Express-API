@@ -58,6 +58,7 @@ display: flex;
  font-family: Futura;
  text-decoration: none;
  font-weight: bold;
+ margin-top: 3px;
 `;
 
 export const Button = styled.button`
